@@ -1,8 +1,7 @@
 $install_docker_script = <<SCRIPT
 echo Installing Docker...
 curl -sSL https://get.docker.com/ | sh
-usermod -aG docker ubuntu
-cat /vagrant/id_rsa.pub >> /home/ubuntu/.ssh/authorized_keys
+usermod -aG docker vagrant
 SCRIPT
 
 $manager_script = <<SCRIPT
